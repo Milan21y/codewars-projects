@@ -4,14 +4,9 @@
 def spin_words(sentence):
     list1 = sentence.split()
     newList = []
-    aList = []
     for element in list1:
         if len(element) >= 5:
-            aList = []
-            aList[:0] = element
-            aList.reverse()
-            a = "".join(aList)
-            newList.append(a)
+            newList.append(element[::-1])
         else:
             newList.append(element)
     return " ".join(newList)
